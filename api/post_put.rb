@@ -13,7 +13,7 @@ module Acme
       { rang: result }
     end
     params do
-      requires :count, type: Integer
+      requires :count, type: Integer, desc: 'The number of additional rings.'
     end
     put :ring do
       result = (PostPut.rang += params[:count].to_i)
